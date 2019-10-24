@@ -12,16 +12,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <Switch>
-              <Route exact path="/">
-                  <HomePage />
-              </Route>
-              {/*<Route exact path="/add">*/}
-              {/*    <CounterWithReduxState />*/}
-              {/*</Route>*/}
-          </Switch>
+          <Router>
+              <div>
+                  <ul>
+                      <li>
+                          <Link to="/"> Home </Link>
+                      </li>
+                  </ul>
 
-        <HomePage />
+                  <hr />
+
+                  <Switch>
+                      <Route exact path="/">
+                          <HomePage />
+                      </Route>
+                  </Switch>
+              </div>
+          </Router>
       </header>
     </div>
   );
